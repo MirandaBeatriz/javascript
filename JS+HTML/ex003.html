@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 003</title>
+    <style>
+        body{
+            background-color: cadetblue;
+            text-align: justify;
+            width: 1200px;
+            margin: auto;
+            padding: 15px;
+        }
+        h1{
+            width: 200px;
+            background-color: cornsilk;
+            text-align: center;
+            color: cadetblue;
+            margin: auto;
+        }
+        p{
+            font-size: 24px;
+            text-indent: 15px;
+        }
+
+        p.code{
+            font-size: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            text-indent: 0%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tratamento de dados</h1>
+
+    <h2>1. Guardando resultado em variável</h2>
+    <p>
+        Para que um valor ou string recebido por meio do usuário através do comando prompt seja perdido, é necessário guardá-lo em uma variável. <br>
+        Portanto, no caso de o usuário precisar digitar seu nome: <br>
+    </p>
+    <p class="code">
+        val nome = window.prompt('Digite seu nome')
+    </p>
+
+    <h2>2. Formatando Strings</h2>
+    <p>
+        Para realizar uma operação entre valores recebidos por um usuário através do comando prompt, é necessário realizar uma conversão. Isso ocorre pois o comando 'prompt' retorna apenas dados do tipo string.
+    </p>
+    <p>
+        A conversão pode ser feita antes da operação, diretamente nos valores recebidos n1 e n2, ou então na variavel final, atravéz do comando Number(valor). <br>
+        <strong>Exemplo:</strong>
+    </p>
+    <p class="code">
+    var n1 = Number(window.prompt('Digite um número:')) <br>
+    var n2 = Number(window.prompt('Digite outro número:')) 
+    </p>
+    
+    <p>
+        O <strong>template string</strong> é um tipo de formatação de string que deixa o código bem mais elegante e organizado.
+        Ou seja, é possível utilizar vários comandos para formatação de strings: <br>
+        Seja var s = 'Bea', temos:
+        <li><strong>Não faz interpolação:</strong> 'Meu nome é s' </li>
+        <li><strong>Usa concatenação:</strong> 'Meu nome é ' + s </li>
+        <li><strong>Usa template string:</strong> `Meu nome é ${s}` </li> 
+    </p>
+
+    <h3>Outras funcionalidades com strings</h3>
+    <p>
+        Existem inúmeras funções interessantes para se usar com strings, entre elas:
+    </p>
+    <li><strong>Contar nº de caracteres: </strong> s.length</li>
+    <li><strong>Colocar tudo em MAIÚSCULO: </strong> s.toUpperCase()</li>
+    <li><strong>Colocar tudo em minúsculo: </strong> s.LowerCase()</li>
+
+
+    <h2>3. Formatando números</h2>
+    <p>
+        Assim como as strings, existem diversos comandos para formatação de variáveis numéricas. <br>
+        Seja var n = 1545.5, temos:
+        <li><strong>Altera número de casas após a vírgula: </strong> n.toFixed(número de casas)</li>
+
+    </p>
+
+    <script>
+    //**Parte em JS**
+    //prompt retorna string, é necessário fazer conversão
+        var n1 = Number.parseFloat(window.prompt('Digite um número:'))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número:'))
+        var s = n1 + n2
+
+        // Template string, uso de ${} dentro de crases
+        window.alert(`Soma entre ${n1} e ${n2} é ${s}.`)
+
+        //(number+number) Adição
+        //(string+string) Concatenação
+
+        s1 = "Até mais"
+        s2 = " e obrigada pelos peixes"
+
+        window.alert(`A resposta de 42 é: ${s1},${s2} `)
+    </script>
+</body>
+</html>
