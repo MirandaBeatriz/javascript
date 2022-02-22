@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+    <style>
+        body{
+            background-color: #3f3d3d;
+        }
+        div#fixo{
+            width: 500px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+
+    <script src="JS/ex008.js"></script>
+</head>
+<body>
+    <div id="fixo">
+        <h1>Sistema de Multas</h1>
+        Velocidade:
+        <input
+            type="number"
+            name="txtvel"
+            id="txtvel">
+        Km/h
+        <input
+            type="button"
+            value="Verificar"
+            onclick="calcular()"
+        >
+            
+        <div id="resultado">
+        </div>
+    </div>
+
+
+</body>
+</html>
